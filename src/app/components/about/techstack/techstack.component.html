@@ -1,0 +1,15 @@
+<div class="skillset">
+    <!-- Skillset heading -->
+    <h1 class="skillset-heading">
+        Professional <strong class="purple">Skillset</strong>
+    </h1>
+
+    <!-- Display tech stack icons -->
+    <div class="row justify-content-center">
+        <div *ngFor="let tech of techStack" class="col-4 col-md-2 text-center tech-icons" [title]="tech.name">
+            <!-- Icon and tech name -->
+            <i [class]="tech.iconClass"></i>
+            <p>{{ tech.name }}</p>
+        </div>
+    </div>
+</div>

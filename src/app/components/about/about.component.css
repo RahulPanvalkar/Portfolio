@@ -1,0 +1,71 @@
+/* About */
+.about {
+    padding-block: 5rem;
+    background: var(--section-background-color), var(--bg-gradient) !important;
+    color: var(--text-color-primary);
+    overflow: hidden;
+}
+
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout for the about section */
+.about-section {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 1rem 5rem 1rem;
+}
+
+.about-heading {
+    font-size: 2.2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.about-description {
+    font-size: 1.2rem;
+}
+
+.about-description p {
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+.about-activity {
+    list-style: none;
+}
+
+.about-activity span {
+    margin-left: 0.5rem;
+}
+
+.quote {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.about-img {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+}
+
+/* Adjust image padding for smaller screens */
+@media (max-width: 48rem) {    /* 768px */ 
+    .about-img {
+        padding-inline: 0;
+    }
+}
+
+/* Toolstack section styling */
+.toolstack-section {
+    width: 105%;
+}

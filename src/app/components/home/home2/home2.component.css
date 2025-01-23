@@ -1,0 +1,110 @@
+.home-about-section {
+    position: relative;
+    padding-block: 5rem;
+    background:
+        linear-gradient(to left, rgba(27, 20, 41, 0.9), rgba(20, 15, 35, 0.9)),
+        var(--bg-img) center/cover no-repeat;
+}
+
+.home-about-description {
+    color: var(--text-color-primary);
+    padding-block: 3rem;
+    text-align: center;
+}
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    text-align: left;
+    gap: 0.6rem;
+}
+
+.first {
+    padding-top: 3rem;
+}
+
+
+.avatar {
+    text-align: center;
+    padding-block: 5rem;
+}
+
+.avatar img {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 48rem) {    /* 768px */ 
+    .avatar {
+        padding-block: 2em;
+    }
+}
+
+
+.home-about-social {
+    text-align: center;
+    color: var(--text-color-primary);
+}
+
+.home-about-social-links {
+    justify-content: center;
+    padding-top: 1rem;
+    display: inline-block;
+    position: relative;
+    padding-inline-start: 0;
+}
+
+.home-social-icons {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2em;
+    background: rgba(255, 255, 255, 0.972);
+    border-radius: 50%;
+    transition: 0.5s;
+    transition: all 0.25s ease-in;
+}
+
+.home-social-icons::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #68187a;
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+}
+
+.home-social-icons:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #801f95;
+}
+
+.home-social-icons:hover svg {
+    transform: scale(1.2); /* Scale the SVG on hover */
+    transition: all 0.25s ease-in;
+}
+
+.home-social-icons svg {
+    transition: all 0.25s ease-in;
+}
+
+.social-icons {
+    display: inline-block;
+    padding-inline: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-colour {
+    color: #700c86;
+}

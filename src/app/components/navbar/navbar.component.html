@@ -1,0 +1,68 @@
+<header class="container-fluid">
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" [class.sticky]="isSticky"> 
+    <div class="container">
+
+      <!-- Brand Logo and Link to Homepage -->
+      <a class="navbar-brand" routerLink="/" (click)="setActiveLink('home')">
+        <span class="purple" alt="brand"><strong>Rp.</strong></span> <!-- Brand name/logo -->
+      </a>
+
+      <!-- Menu Toggle Button for Mobile View -->
+      <button aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation"
+        [attr.aria-expanded]="expand" (click)="toggleExpand()" class="navbar-toggler"
+        [ngClass]="{ collapsed: !expand }"> <!-- Toggles the navbar on mobile view -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navbar Links Section (for Mobile and Desktop Views) -->
+      <div class="navbar-collapse" [ngClass]="{ 'show': expand, 'd-md-flex': !expand }">
+        <!-- List of Navigation Links -->
+        <ul class="nav-list align-items-center">
+
+          <!-- Home Link -->
+          <li class="nav-item" [class.active]="activeLink === 'home'">
+            <a class="nav-link" routerLink="/" (click)="setActiveLink('home')"
+              (mouseenter)="setActiveLinkOnHover('home')" (mouseleave)="setActiveLinkOnLeave()">
+              <img src="assets/svg/home.svg" alt="home"> Home
+            </a>
+          </li>
+
+          <!-- About Link -->
+          <li class="nav-item" [class.active]="activeLink === 'about'">
+            <a class="nav-link" routerLink="/about" (click)="setActiveLink('about')"
+              (mouseenter)="setActiveLinkOnHover('about')" (mouseleave)="setActiveLinkOnLeave()">
+              <img src="assets/svg/about.svg" alt="about"> About
+            </a>
+          </li>
+
+          <!-- Projects Link -->
+          <li class="nav-item" [class.active]="activeLink === 'projects'">
+            <a class="nav-link" routerLink="/projects" (click)="setActiveLink('projects')"
+              (mouseenter)="setActiveLinkOnHover('projects')" (mouseleave)="setActiveLinkOnLeave()">
+              <img src="assets/svg/project.svg" alt="projects"> Projects
+            </a>
+          </li>
+
+          <!-- Resume Link -->
+          <li class="nav-item" [class.active]="activeLink === 'resume'">
+            <a class="nav-link" routerLink="/resume" (click)="setActiveLink('resume')"
+              (mouseenter)="setActiveLinkOnHover('resume')" (mouseleave)="setActiveLinkOnLeave()">
+              <img src="assets/svg/resume.svg" alt="resume"> Resume
+            </a>
+          </li>
+
+          <!-- External GitHub Link -->
+          <li class="nav-item">
+            <a href="https://github.com/RahulPanvalkar/Portfolio" target="_blank" class="github-link-btn">
+              <img src="assets/svg/git.svg" alt="git">
+              <img src="assets/svg/star.svg" alt="star" class="ms-1">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+:root {
+  /* Background and gradients */
+  --bg-gradient: linear-gradient(to left, rgba(27, 20, 41, 0.85), rgba(20, 15, 35, 0.85));
+  --loader-bg: linear-gradient(to left, rgba(27, 20, 41, 0.9), rgba(20, 15, 35, 0.9));
+  --bg-img: url('./assets/home-bg.jpg');
+  --section-background-color: linear-gradient(to bottom left, rgba(17, 16, 16, 0.582), rgba(12, 8, 24, 0.904));
+  --image-gradient: linear-gradient(to bottom left, rgba(17, 16, 16, 0.678), rgba(12, 10, 22, 0.863));
+
+  /* Text and font styles */
+  --font-family: "Raleway", serif, Arial !important;
+  --font-size-navlinks: 1.1rem;
+  --font-size-base: 1.1rem;
+  --font-size-large: 1.5rem;
+  --font-size-small: 0.875rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height: 1.6;
+  --nav-letter-spacing: 0.1rem;
+  --text-letter-spacing: 0.05rem;
+  --imp-text-color: #c770f0;
+  --text-color-primary: #f8f8f8;
+  --text-color-secondary: #bbbbbb;
+}
+
+html, body {
+  font-family: var(--font-family);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background: 
+    var(--bg-gradient),/* Gradient layer */
+    var(--bg-img) center/cover no-repeat; /* Image layer with position, size and repeat */
+  background-color: #0f0f0f;
+  letter-spacing: var(--text-letter-spacing);
+}
+
+.purple {
+  color: var(--imp-text-color) !important;
+}
+
+
+/* ## starry background animation ## */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure it doesn't block clicks */
+  z-index: 1; /* Position it behind the Angular app */
+}
+
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2d1950;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(178, 121, 216, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 130, 235, 0.911);
+  border-radius: 12px;
+}
+
+/* --------- */
+/* Animations */
+/* --------- */
+
+/* Fade In & Out Effect */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-animation {
+  animation: fadeInOut 1s;
+}
+
+/* Fade In-out & Zoom out-in Effect */
+@keyframes fade-zoom {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-zoom-animation {
+  animation: fade-zoom 1s;
+}

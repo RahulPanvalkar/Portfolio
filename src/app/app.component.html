@@ -1,0 +1,13 @@
+<!-- Displays loading screen -->
+<div [ngClass]="{ 'preloader': (isLoading | async), 'preloader-none': !(isLoading | async) }">
+    <img src="assets/svg/pre.svg" alt="loading">
+</div>
+
+<!-- Navbar component -->
+<app-navbar></app-navbar>
+
+<!-- Placeholder for routed components -->
+<router-outlet></router-outlet>
+
+<!-- Footer component -->
+<app-footer></app-footer>

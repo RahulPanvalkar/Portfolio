@@ -1,0 +1,50 @@
+<main class="project-section">
+    <!-- Main container for the projects section -->
+    <div class="container fade-animation">
+        <!-- Section heading -->
+        <div class="ms-3 text-light">
+            <h1 class="project-heading">
+                My Recent <strong class="purple">Works</strong>
+            </h1>
+            <p>
+                Here are a few projects I've worked on recently.
+            </p>
+        </div>
+
+        <!-- Display a grid of project cards -->
+        <div class="row">
+            <!-- Loop through each project and create a card for it -->
+            <div class="col-md-4 project-card" *ngFor="let project of projects;">
+                <div class="card project-card-view">
+                    <!-- Project image -->
+                    <img class="card-img-top" [src]="project.imgPath" [alt]="project.title" (load)="onLoadComplete()"/>
+                    <div class="card-body">
+                        <!-- Project title -->
+                        <h5 class="card-title text-center mb-3">{{ project.title }}</h5>
+                        <!-- Project description with bullet points -->
+                        <p class="card-text">
+                            <span *ngFor="let desc of project.description">
+                                <i class="fas fa-circle"></i>
+                                {{ desc }}
+                            </span>
+                        </p>
+
+                        <!-- Links to GitHub and Demo (if available) -->
+                        <div class="links mt-3">
+                            <!-- GitHub link -->
+                            <a class="btn btn-primary" [href]="project.ghLink" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <!-- Demo link (only rendered if available) -->
+                            <a *ngIf="project.demoLink" class="btn btn-primary" [href]="project.demoLink"
+                                target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+                                <i class="fas fa-globe"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

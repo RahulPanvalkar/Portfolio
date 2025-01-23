@@ -1,0 +1,62 @@
+/* Footer Styles */
+.footer {
+    background-color: rgb(10, 4, 22);
+    width: 100%;
+    padding-block: 1em; /* Adds vertical space to prevent overlap */
+}
+
+.footer-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-block: 0.2em;
+    padding-block: 0.2em;
+}
+
+.footer-body p {
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-icons-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons {
+    margin: 0 1rem;
+}
+
+.social-icons a {
+    cursor: pointer;
+}
+
+.social-icons svg {
+    width: 1.3rem; /* Slightly larger icons */
+    height: 1.3rem;
+    transition: transform 0.4s ease; /* Smooth scaling transition */
+}
+
+.social-icons svg:hover {
+    transform: scale(1.2); /* Hover effect for social icons */
+}
+
+@media (max-width: 48rem) {    /* 768px */ 
+    .footer {
+        padding-block: 0.5rem;
+    }
+
+    .footer-body {
+        flex-direction: column;
+        align-items: center;
+        margin-block: 0.5rem;
+        padding: 0;
+    }
+}

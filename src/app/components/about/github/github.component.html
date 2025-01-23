@@ -1,0 +1,56 @@
+<div class="github-container container" *ngIf="totalContributions > 0">
+  <!-- Section Heading -->
+  <h1 class="text-center py-4">
+    Days I <strong class="purple">Code</strong>
+  </h1>
+
+  <div class="calendar">
+    <!-- Month Labels Row -->
+    <div class="months">
+      <!-- Loop through the months array to render each month label -->
+      <div class="month" *ngFor="let month of months" [style.gridColumnStart]="month.start">
+        {{ month.name }}
+      </div>
+    </div>
+
+    <!-- Weeks and Contribution Days -->
+    <div class="weeks">
+      <!-- Loop through the weeks array to render each week -->
+      <div class="week" *ngFor="let week of weeks">
+        <!-- Loop through each week's contributionDays to render individual days -->
+        <div class="day" *ngFor="let day of week.contributionDays" [attr.data-level]="getContributionLevel(day.count)"
+          title="{{ day.date }} - {{ day.count }} contributions"> <!-- Tooltip with date and contribution count -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendar Footer -->
+    <div class="footer">
+      <!-- Total Contributions in the Past Year -->
+      <span>
+        {{ totalContributions }} contributions in the last year
+      </span>
+
+      <!-- Contribution Level Indicator -->
+      <div class="legend">
+        <span>Less</span>
+        <svg>
+          <rect width="15" height="15" fill="var(--github-calendar-bg-light)"></rect>
+        </svg>
+        <svg>
+          <rect width="15" height="15" fill="var(--github-calendar-bg-medium)"></rect>
+        </svg>
+        <svg>
+          <rect width="15" height="15" fill="var(--github-calendar-bg-dark)"></rect>
+        </svg>
+        <svg>
+          <rect width="15" height="15" fill="var(--github-calendar-bg-darker)"></rect>
+        </svg>
+        <svg>
+          <rect width="15" height="15" fill="var(--github-calendar-bg-darkest)"></rect>
+        </svg>
+        <span>More</span>
+      </div>
+    </div>
+  </div>
+</div>

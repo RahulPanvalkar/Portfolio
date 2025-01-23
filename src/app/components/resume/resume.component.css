@@ -1,0 +1,59 @@
+/* Resume */
+.resume-section {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    background: var(--section-background-color), var(--bg-gradient) !important;
+}
+
+.download-btn {
+    position: relative;
+    z-index: 2;
+    color: var(--text-color-primary);
+    background-color: #623686;
+    border-color: #623686;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    padding-block: 0.4rem;
+    padding-inline: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: scale(0.95);
+}
+
+.resume {
+    width: 80%;
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.resume img {
+    width: 80%;
+    height: auto;
+}
+
+
+/* Adjusts the resume container for larger screens */
+@media (min-width: 53.125rem) { /* 850px */
+    .resume {
+        width: 100%;
+    }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 53.125rem) { /* 850px */
+    .resume-section {
+        height: unset;
+    }
+    .resume {
+        width: unset;
+        height: unset;
+    }
+}

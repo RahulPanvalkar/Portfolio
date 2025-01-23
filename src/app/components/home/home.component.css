@@ -1,0 +1,139 @@
+/* Home Section */
+.home-section {
+  position: relative;
+  height: 90svh;
+  background:
+    linear-gradient(to left, rgba(27, 20, 41, 0.95), rgba(20, 15, 35, 0.95)),
+    var(--bg-img) center/cover no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  margin: 0;
+}
+
+.home-content {
+  color: var(--text-color-primary);
+  text-align: left;
+}
+
+.home-header {
+  padding-block: 5rem;
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 2;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.4em;
+  padding: 0;
+  margin: 0;
+}
+
+.heading-name {
+  font-size: 2.5em;
+}
+
+.main-name {
+  color: #cd5ff8;
+}
+
+/* Typewriter Effect */
+.type-writer {
+  display: flex;
+  margin-block: 1rem;
+}
+
+.type-writer__wrapper {
+  font-size: 2.2em;
+  color: #be6adf;
+  font-weight: 600;
+  text-align: left;
+}
+
+.type-writer__cursor {
+  font-size: 2.4rem;
+  color: #b562d6;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+/* Image */
+.home-content img {
+  max-height: 28rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 48rem) {    /* 768px */ 
+  .home-section {
+    padding: 0;
+    margin-top: 4rem;
+  }
+
+  .type-writer__wrapper {
+    font-size: 1.5em;
+    font-weight: 500;
+    position: absolute;
+  }
+
+  .type-writer__cursor {
+    display: none;
+  }
+}
+
+
+/* Wave Animation Styles */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg); /* Starting position */
+  }
+
+  10% {
+    transform: rotate(14deg); /* Slightly rotates the hand */
+  }
+
+  20% {
+    transform: rotate(-8deg); /* Rotates the hand in the opposite direction */
+  }
+
+  30% {
+    transform: rotate(14deg); /* Returns to the initial direction */
+  }
+
+  40% {
+    transform: rotate(-4deg); /* Slight adjustment back */
+  }
+
+  50% {
+    transform: rotate(10deg); /* Rotates forward again */
+  }
+
+  60% {
+    transform: rotate(0deg); /* Returns to the resting position */
+  }
+
+  100% {
+    transform: rotate(0deg); /* Completes the cycle */
+  }
+}
+
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
